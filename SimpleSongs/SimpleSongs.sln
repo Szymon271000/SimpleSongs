@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleSongsController", "Si
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Database\Database.csproj", "{85D8F519-16D0-4A4D-8CB6-C4FAC7977745}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSongsView", "SimpleSongsView\SimpleSongsView.csproj", "{93F6D961-A9F5-45A2-A219-742BBCD6A0A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleSongsView", "SimpleSongsView\SimpleSongsView.csproj", "{93F6D961-A9F5-45A2-A219-742BBCD6A0A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

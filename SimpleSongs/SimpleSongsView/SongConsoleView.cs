@@ -1,10 +1,6 @@
 ﻿using Database.Models;
 using SimpleSongsView.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace SimpleSongsView
 {
@@ -22,7 +18,7 @@ namespace SimpleSongsView
 
         public void DisplaySingle(Song entity)
         {
-            Console.WriteLine($"Title: {entity.Title} || Author: {entity.Author} || Album name: {entity.AlbumName} || Lenght: {entity.Length}");
+            Console.WriteLine($"Title: {entity.Title} || Author: {entity.Author} || Album name: {entity.AlbumName} || Lenght: {entity.Length} seconds");
         }
     }
 }

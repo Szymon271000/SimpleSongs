@@ -2,11 +2,6 @@
 using Database.SongRepository;
 using SimpleSongsController.Factory;
 using SimpleSongsView.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleSongsController.Handler
 {
@@ -40,6 +35,8 @@ namespace SimpleSongsController.Handler
                 case "5":
                     DisplayASpecificSong();
                     break;
+                case "quit":
+                    return;
                 default:
                     _display.PrintMessage("Incorrect input, please type number of option");
                     break;
@@ -48,9 +45,9 @@ namespace SimpleSongsController.Handler
 
         public void DisplayASpecificSong()
         {
-            string title = _inputSystem.FetchStringValue("Insert the name of the title to search");
-            string author = _inputSystem.FetchStringValue("Insert the name of the author of the song to search");
-            string album = _inputSystem.FetchStringValue("Insert the name of the album of the song to search");
+            string title = _inputSystem.FetchStringValue("Type the title of the song to search");
+            string author = _inputSystem.FetchStringValue("Type the name of the author of the song to search");
+            string album = _inputSystem.FetchStringValue("Type the name of the album of the song to search");
             var songToFind = _songRepository.GetAll().FirstOrDefault(x => x.Author == author && x.Title == title
             && x.AlbumName == album);
             if (songToFind != null)
@@ -97,9 +94,9 @@ namespace SimpleSongsController.Handler
         public void DeleteSong()
         {
             DisplayAllSongs();
-            string title = _inputSystem.FetchStringValue("Insert the name of the title to delete");
-            string author = _inputSystem.FetchStringValue("Insert the name of the author of the song to delete");
-            string album = _inputSystem.FetchStringValue("Insert the name of the album of the song to delete");
+            string title = _inputSystem.FetchStringValue("Type the title of the song to delete");
+            string author = _inputSystem.FetchStringValue("Type the name of the author of the song to delete");
+            string album = _inputSystem.FetchStringValue("Type the name of the album of the song to delete");
             var songToBeDeleted = _songRepository.GetAll().FirstOrDefault(x => x.Author == author && x.Title == title
             && x.AlbumName == album);
             if (songToBeDeleted != null)
