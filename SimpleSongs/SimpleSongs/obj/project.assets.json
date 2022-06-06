@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\QVXP36\\Desktop\\Simplesongs\\SimpleSongs\\SimpleSongs\\SimpleSongs.csproj",
-      "projectName": "SimpleSongs",
-      "projectPath": "C:\\Users\\QVXP36\\Desktop\\Simplesongs\\SimpleSongs\\SimpleSongs\\SimpleSongs.csproj",
+      "projectUniqueName": "C:\\Users\\QVXP36\\Desktop\\Simplesongs\\SimpleSongs\\SimpleSongs\\SimpleSongsController.csproj",
+      "projectName": "SimpleSongsController",
+      "projectPath": "C:\\Users\\QVXP36\\Desktop\\Simplesongs\\SimpleSongs\\SimpleSongs\\SimpleSongsController.csproj",
       "packagesPath": "C:\\Users\\QVXP36\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\QVXP36\\Desktop\\Simplesongs\\SimpleSongs\\SimpleSongs\\obj\\",
       "projectStyle": "PackageReference",
