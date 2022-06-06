@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    internal interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class
     {
         void Insert(T obj);
         void Delete(object id);
         List<T> GetAll();
         T GetSingle(Func<T, bool> condition);
         void Save();
-
-        List<T> GetAllOrdered();
+        T GetById(object id);
     }
 }
