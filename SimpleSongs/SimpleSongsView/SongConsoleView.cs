@@ -22,7 +22,7 @@ namespace SimpleSongsView
 
         public void DisplaySingle(Song entity)
         {
-            Console.WriteLine($"{entity.Title} {entity.Author} {entity.AlbumName} {entity.Length}");
+            Console.WriteLine($"Title: {entity.Title} || Author: {entity.Author} || Album name: {entity.AlbumName} || Lenght: {entity.Length}");
         }
     }
 }
