@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Database.Context;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,36 +8,47 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    internal class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
+        protected DbContext _context = null;
+        protected DbSet<T> table = null;
+
+        public GenericRepository()
+        {
+            _context = new SongContext();
+            table = _context.Set<T>();
+        }
         public void Delete(object id)
         {
-            throw new NotImplementedException();
+            T existing = table.Find(id);
+            table.Remove(existing);
         }
 
         public List<T> GetAll()
         {
-            throw new NotImplementedException();
+            return table.ToList();
         }
 
-        public List<T> GetAllOrdered()
+
+        public T GetById(object id)
         {
-            throw new NotImplementedException();
+            return table.Find(id);
         }
 
         public T GetSingle(Func<T, bool> condition)
         {
-            throw new NotImplementedException();
+            return table
+            .Where(condition).FirstOrDefault();
         }
 
         public void Insert(T obj)
         {
-            throw new NotImplementedException();
+            table.Add(obj);
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            _context.SaveChanges();
         }
     }
 }
