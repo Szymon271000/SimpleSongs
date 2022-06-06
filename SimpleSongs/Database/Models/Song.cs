@@ -16,5 +16,18 @@ namespace Database.Models
         public string AlbumName { get; set; }
         public double Length { get; set; }
 
+        public Song (string title, string author, string albumname, double length)
+        {
+            Title = title;
+            Author = author;
+            AlbumName = albumname;
+            Length = length;
+        }
+
+        public Song()
+        {
+
+        }
+
     }
 }
