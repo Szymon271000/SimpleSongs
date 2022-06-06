@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimpleSongsController.Handler.Interfaces
 {
-    internal interface IUserDataManager
+    public interface IUserDataManager
     {
+        public void Run();
     }
 }
