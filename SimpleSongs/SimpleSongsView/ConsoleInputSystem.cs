@@ -9,10 +9,10 @@ namespace SimpleSongsView
 {
     public class ConsoleInputSystem : IInputSystem
     {
-        public decimal FetchDecimalValue(string prompt)
+        public double FetchDecimalValue(string prompt)
         {
-            decimal result;
-            while (!Decimal.TryParse(FetchStringValue(prompt), out result)) continue;
+            double result;
+            while (!Double.TryParse(FetchStringValue(prompt), out result)) continue;
             return result;
         }
 
