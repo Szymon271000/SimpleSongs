@@ -631,6 +631,32 @@
             "rid": "win"
           }
         }
+      },
+      "Database/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.4"
+        },
+        "compile": {
+          "bin/placeholder/Database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Database.dll": {}
+        }
+      },
+      "SimpleSongsView/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Database": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SimpleSongsView.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SimpleSongsView.dll": {}
+        }
       }
     }
   },
@@ -1850,13 +1876,24 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Database/1.0.0": {
+      "type": "project",
+      "path": "../Database/Database.csproj",
+      "msbuildProject": "../Database/Database.csproj"
+    },
+    "SimpleSongsView/1.0.0": {
+      "type": "project",
+      "path": "../SimpleSongsView/SimpleSongsView.csproj",
+      "msbuildProject": "../SimpleSongsView/SimpleSongsView.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Design >= 6.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.4",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.4"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.4",
+      "SimpleSongsView >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1885,7 +1922,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\QVXP36\\Desktop\\Simplesongs\\SimpleSongs\\SimpleSongsView\\SimpleSongsView.csproj": {
+              "projectPath": "C:\\Users\\QVXP36\\Desktop\\Simplesongs\\SimpleSongs\\SimpleSongsView\\SimpleSongsView.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
