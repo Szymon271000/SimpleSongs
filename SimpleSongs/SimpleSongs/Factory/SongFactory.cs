@@ -25,20 +25,11 @@ namespace SimpleSongsController.Factory
             do
             {
                 author = _inputSystem.FetchStringValue("Type author of the song (min 5 sings)");
-                if (string.IsNullOrEmpty(author))
-                {
-                    throw new EmptyAuthorException("Title cannot be an empty string");
-                }
                 checkInputs = (author.Length > 5);
             } while (!checkInputs);
             do
             {
                 albumName = _inputSystem.FetchStringValue("Type album name (min 5 signs)");
-                if (string.IsNullOrEmpty(albumName))
-                {
-                    throw new EmptyAlbumException("Album name cannot be an empty string");
-
-                }
                 checkInputs = (albumName.Length > 5);
             } while (!checkInputs);
             do
